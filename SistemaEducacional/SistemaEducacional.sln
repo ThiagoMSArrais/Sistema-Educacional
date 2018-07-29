@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 -  Presentation", "1 -  Presentation", "{AA8E705E-3D5E-4E52-9230-36AED0748409}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{02E0D516-52F7-4286-AA2A-BC92577768FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{0A27D5E6-77FF-413D-B861-CE9370C61E8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{00713CEC-6391-4196-8992-3C961479D11F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{5E06BB4E-4E54-4C39-87E7-6666F1661D80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{1729C7AB-99C6-4A07-A4FB-AC719A78AD1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{9BB8C6A3-386F-4C96-94CE-499368FEF29F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMSA.SistemaEducacional.Domain.Core", "src\TMSA.SistemaEducacional.Domain.Core\TMSA.SistemaEducacional.Domain.Core.csproj", "{258593C3-8AA0-4622-B056-62FE4663E747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{258593C3-8AA0-4622-B056-62FE4663E747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258593C3-8AA0-4622-B056-62FE4663E747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258593C3-8AA0-4622-B056-62FE4663E747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258593C3-8AA0-4622-B056-62FE4663E747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1729C7AB-99C6-4A07-A4FB-AC719A78AD1D} = {5E06BB4E-4E54-4C39-87E7-6666F1661D80}
+		{9BB8C6A3-386F-4C96-94CE-499368FEF29F} = {5E06BB4E-4E54-4C39-87E7-6666F1661D80}
+		{258593C3-8AA0-4622-B056-62FE4663E747} = {00713CEC-6391-4196-8992-3C961479D11F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EB55477-D568-4B2E-ACFB-604B19E5E8AD}
+	EndGlobalSection
+EndGlobal
