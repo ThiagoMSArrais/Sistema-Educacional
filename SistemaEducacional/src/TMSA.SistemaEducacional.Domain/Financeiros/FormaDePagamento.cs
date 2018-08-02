@@ -1,6 +1,6 @@
-﻿namespace TMSA.SistemaEducacional.Domain.Matriculas
+﻿namespace TMSA.SistemaEducacional.Domain.Financeiros
 {
-    public enum Financeiros
+    public enum FormaDePagamentos
     {
         Boleto,
         Cheque,
