@@ -2,7 +2,7 @@
 {
     public enum Turno
     {
-        Matutitno,
+        Matutino,
         Vespertino,
         Noturno
     }
