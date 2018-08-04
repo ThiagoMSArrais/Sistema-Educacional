@@ -12,7 +12,8 @@ namespace TMSA.SistemaEducacional.Domain.Matriculas
             DateTime dataCadastro,
             Turno turno)
         {
-                
+            DataCadastro = dataCadastro;
+            Turno = turno;
         }
 
         public DateTime DataCadastro { get; private set; }
