@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TMSA.SistemaEducacional.Domain.Provas
 {
-    class Prova
+    public class Prova
     {
     }
 }

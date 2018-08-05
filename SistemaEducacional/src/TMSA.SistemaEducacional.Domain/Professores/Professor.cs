@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TMSA.SistemaEducacional.Domain.Professores
 {
-    class Professor
+    public class Professor
     {
     }
 }
