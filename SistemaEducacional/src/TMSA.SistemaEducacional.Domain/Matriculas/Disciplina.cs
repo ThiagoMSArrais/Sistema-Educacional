@@ -19,7 +19,9 @@ namespace TMSA.SistemaEducacional.Domain.Matriculas
             DiaDaSemana = diaDaSemana;
             Turma = turma;
         }
-       
+
+        // EF Construtor
+        protected Disciplina() { }
 
         public string Nome { get; private set; }
         public DiaDaSemana? DiaDaSemana { get; private set; }
