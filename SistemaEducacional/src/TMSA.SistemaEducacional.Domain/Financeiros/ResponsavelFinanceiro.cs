@@ -10,7 +10,7 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
     {
 
         //EF Construtor
-        protected ResponsavelFinanceiro() { ]}
+        protected ResponsavelFinanceiro() { }
 
         public Guid? DadosBancariosId{ get; private set; }
         public Guid? CartaoDeCreditoId { get; private set; }
