@@ -71,7 +71,7 @@ namespace TMSA.SistemaEducacional.Domain.Pessoas
         {
             RuleFor(c => c.CPF)
                 .NotEmpty().WithMessage("Preencha o CPF.")
-                .Length(11, 11).WithMessage("Preencha o CPF somente com 11 digitos.");
+                .Length(11).WithMessage("Preencha o CPF somente com 11 digitos.");
         }
 
         private void ValidarRG()
