@@ -10,6 +10,8 @@ using TMSA.SistemaEducacional.Domain.Pessoas;
 using TMSA.SistemaEducacional.Domain.Presencas;
 using TMSA.SistemaEducacional.Domain.Professores;
 using TMSA.SistemaEducacional.Domain.Provas;
+using TMSA.SistemaEducacional.Infra.Data.Mappings;
+using TMSA.SistemaEducacional.Infra.Data.Extensions;
 
 namespace TMSA.SistemaEducacional.Infra.Data.Context
 {
@@ -35,7 +37,7 @@ namespace TMSA.SistemaEducacional.Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new EnderecoMapping());
+            modelBuilder.AddConfiguration(new EnderecoMapping());
 
             base.OnModelCreating(modelBuilder);
         }
