@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 using TMSA.SistemaEducacional.Domain.Interfaces;
 using TMSA.SistemaEducacional.Infra.Data.Context;
