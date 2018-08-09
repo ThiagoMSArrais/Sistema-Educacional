@@ -16,12 +16,14 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
         public Guid? CartaoDeCreditoId { get; private set; }
         public Guid? PessoaJuridicaId { get; private set; }
         public Guid? PessoaFisicaId { get; private set; }
+        public Guid? FinanceiroId { get; private set; }
 
         //EF Propriedades de Navegação
         public virtual DadosBancario DadosBancario { get; private set; }
         public virtual CartaoDeCredito CartaoDeCredito { get; private set; }
         public virtual PessoaJuridica PessoaJuridica { get; private set; }
         public virtual PessoaFisica PessoaFisica { get; private set; }
+        public virtual Financeiro Financeiro { get; private set; }
         public virtual ICollection<Aluno> AlunosBeneficiados { get; private set; }
 
         public override bool EhValido()

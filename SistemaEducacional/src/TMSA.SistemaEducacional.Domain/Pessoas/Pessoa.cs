@@ -31,9 +31,13 @@ namespace TMSA.SistemaEducacional.Domain.Pessoas
         public string Telefone { get; private set; }
         public string Celular { get; private set; }
         public Guid? EnderecoId { get; private set; }
+        public Guid? PessoaFisicaId { get; private set; }
+        public Guid? PessoaJuridicaId { get; private set; }
 
         // EF Propriedades de Navegação
         public virtual Endereco Endereco { get; private set; }
+        public virtual PessoaFisica PessoaFisica { get; private set; }
+        public virtual PessoaJuridica PessoaJuridica { get; private set; }
 
         public override bool EhValido()
         {

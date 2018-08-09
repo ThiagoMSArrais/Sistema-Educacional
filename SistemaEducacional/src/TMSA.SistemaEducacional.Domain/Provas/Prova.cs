@@ -1,5 +1,7 @@
 ﻿using System;
+using TMSA.SistemaEducacional.Domain.Alunos;
 using TMSA.SistemaEducacional.Domain.Core.Models;
+using TMSA.SistemaEducacional.Domain.Matriculas;
 
 namespace TMSA.SistemaEducacional.Domain.Provas
 {
@@ -29,8 +31,11 @@ namespace TMSA.SistemaEducacional.Domain.Provas
         public StatusAprovacao StatusAprovacao { get; private set; }
         public Guid? AlunoId { get; private set; }
         public Guid? DisciplinaId { get; private set; }
-        public Guid? ProvaId { get; private set; }
 
+
+        //EF PROPRIEDADE DE NAVEGAÇÃO
+        public virtual Aluno Aluno { get; private set; }
+        public virtual Disciplina Disciplina { get; private set; }
 
         public override bool EhValido()
         {

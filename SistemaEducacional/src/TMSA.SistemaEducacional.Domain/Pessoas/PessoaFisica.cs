@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
 using System;
+using TMSA.SistemaEducacional.Domain.Alunos;
 using TMSA.SistemaEducacional.Domain.Core.Models;
+using TMSA.SistemaEducacional.Domain.Financeiros;
 using TMSA.SistemaEducacional.Domain.Funcionarios;
 
 namespace TMSA.SistemaEducacional.Domain.Pessoas
@@ -37,10 +39,13 @@ namespace TMSA.SistemaEducacional.Domain.Pessoas
         public GrauEscolar? GrauEscolar { get; private set; }
         public Guid PessoaId { get; private set; }
         public Guid? FuncionarioID { get; private set; }
+        public Guid? AlunoId { get; private set; }
 
         // EF Propriedades Navegação
         public virtual Pessoa Pessoa { get; private set; }
         public virtual Funcionario Funcionario { get; private set; }
+        public virtual Aluno Aluno { get; private set; }
+        public virtual ResponsavelFinanceiro ResponsavelFinanceiro { get; private set; }
 
         public override bool EhValido()
         {

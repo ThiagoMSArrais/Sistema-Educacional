@@ -38,6 +38,21 @@ namespace TMSA.SistemaEducacional.Infra.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.AddConfiguration(new EnderecoMapping());
+            modelBuilder.AddConfiguration(new AlunoMapping());
+            modelBuilder.AddConfiguration(new FiliacaoMapping());
+            modelBuilder.AddConfiguration(new CartaoDeCreditoMapping());
+            modelBuilder.AddConfiguration(new DadosBancarioMapping());
+            modelBuilder.AddConfiguration(new FinanceiroMapping());
+            modelBuilder.AddConfiguration(new ResponsavelFinanceiroMapping());
+            modelBuilder.AddConfiguration(new FuncionarioMapping());
+            modelBuilder.AddConfiguration(new DisciplinaMapping());
+            modelBuilder.AddConfiguration(new MatriculasMapping());
+            modelBuilder.AddConfiguration(new PessoaMapping());
+            modelBuilder.AddConfiguration(new PessoaFisicaMapping());
+            modelBuilder.AddConfiguration(new PessoaJuridicaMapping());
+            modelBuilder.AddConfiguration(new PresencaMapping());
+            modelBuilder.AddConfiguration(new ProfessorMapping());
+            modelBuilder.AddConfiguration(new ProvaMapping());
 
             base.OnModelCreating(modelBuilder);
         }

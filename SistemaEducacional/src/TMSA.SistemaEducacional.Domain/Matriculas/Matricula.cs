@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using TMSA.SistemaEducacional.Domain.Alunos;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 using TMSA.SistemaEducacional.Domain.Financeiros;
@@ -31,7 +32,7 @@ namespace TMSA.SistemaEducacional.Domain.Matriculas
 
         // EF Propriedades de Navegação
         public virtual Financeiro Financeiro { get; private set; }
-        public virtual Aluno Aluno { get; set; }
+        public virtual Aluno Aluno { get; private set; }
 
         public override bool EhValido()
         {

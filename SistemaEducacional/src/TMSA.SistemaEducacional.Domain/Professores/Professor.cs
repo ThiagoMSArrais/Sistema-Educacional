@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 using TMSA.SistemaEducacional.Domain.Funcionarios;
 using TMSA.SistemaEducacional.Domain.Matriculas;
@@ -25,6 +26,7 @@ namespace TMSA.SistemaEducacional.Domain.Professores
         public Guid? FuncionarioId { get; private set; }
         public Guid? PresencaId { get; private set; }
         public GrauDeEnsino GrauDeEnsino { get; private set; }
+        [NotMapped]
         public List<Disciplina> Disciplinas { get; private set; }
 
         //EF Propriedade da Navegação

@@ -1,9 +1,12 @@
 ﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using TMSA.SistemaEducacional.Domain.Alunos;
 using TMSA.SistemaEducacional.Domain.Core.Models;
+using TMSA.SistemaEducacional.Domain.Presencas;
 using TMSA.SistemaEducacional.Domain.Professores;
+using TMSA.SistemaEducacional.Domain.Provas;
 
 namespace TMSA.SistemaEducacional.Domain.Matriculas
 {
@@ -26,10 +29,15 @@ namespace TMSA.SistemaEducacional.Domain.Matriculas
         public string Nome { get; private set; }
         public DiaDaSemana? DiaDaSemana { get; private set; }
         public int Turma { get; private set; }
+        public Guid? PresencaId { get; private set; }
+        public Guid? ProvaId { get; private set; }
 
         // EF Propriedades de Navegação
         public virtual ICollection<Aluno> Alunos { get; set; }
+        [NotMapped]
         public virtual ICollection<Professor> Professores { get; set; }
+        public virtual Presenca Presenca { get; private set; }
+        public virtual Prova Prova { get; private set; }
 
         public override bool EhValido()
         {

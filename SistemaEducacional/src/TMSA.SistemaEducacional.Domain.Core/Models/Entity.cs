@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TMSA.SistemaEducacional.Domain.Core.Models
 {
@@ -12,6 +13,7 @@ namespace TMSA.SistemaEducacional.Domain.Core.Models
         }
 
         public Guid Id { get; protected set; }
+        [NotMapped]
         public ValidationResult ValidationResult { get; protected set; }
         public abstract bool EhValido();
 

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using System;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 
 namespace TMSA.SistemaEducacional.Domain.Financeiros
@@ -21,10 +22,14 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
         public string NumeroDoCartao { get; private set; }
         public string CVV { get; private set; }
         public BandeiraDoCartao BandeiraDoCartao { get; private set; }
+        public Guid? ResponsavelFinanceiroId { get; private set; }
 
+        //EF PROPRIEDADES DE NAVEGAÇÃO.
+        public virtual ResponsavelFinanceiro ResponsavelFinanceiro { get; private set; }
 
         //EF Construtor
         protected CartaoDeCredito() { }
+
         public override bool EhValido()
         {
             Validar();

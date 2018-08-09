@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using TMSA.SistemaEducacional.Domain.Core.Models;
+using TMSA.SistemaEducacional.Domain.Financeiros;
 
 namespace TMSA.SistemaEducacional.Domain.Pessoas
 {
@@ -29,6 +30,7 @@ namespace TMSA.SistemaEducacional.Domain.Pessoas
 
         // EF Propriedade de Navegação
         public virtual Pessoa Pessoa { get; private set; }
+        public virtual ResponsavelFinanceiro ResponsavelFinanceiro { get; private set; }
 
         public override bool EhValido()
         {

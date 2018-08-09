@@ -49,6 +49,10 @@ namespace TMSA.SistemaEducacional.Domain.Alunos
         public DateTime DataDeNascimentoDaMae { get; private set; }
         public string CelularDaMae { get; private set; }
         public string EmailDaMae { get; private set; }
+        public Guid? AlunoId { get; private set; }
+
+        //EF Propriedades de Navegação
+        public virtual Aluno Aluno { get; private set; }
 
         public override bool EhValido()
         {

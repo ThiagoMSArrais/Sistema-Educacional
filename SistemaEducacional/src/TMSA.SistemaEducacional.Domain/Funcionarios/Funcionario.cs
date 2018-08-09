@@ -2,6 +2,7 @@
 using System;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 using TMSA.SistemaEducacional.Domain.Pessoas;
+using TMSA.SistemaEducacional.Domain.Professores;
 
 namespace TMSA.SistemaEducacional.Domain.Funcionarios
 {
@@ -24,12 +25,14 @@ namespace TMSA.SistemaEducacional.Domain.Funcionarios
         public DateTime DataDeAdmissao { get; private set; }
         public DateTime? DataDeDemissao { get; private set; }
         public Guid? PessoaFisicaId { get; private set; }
+        public Guid? ProfessorId { get; private set; }
 
         //EF Construtor
         protected Funcionario() { }
 
         //EF Propriedades de Navegação
         public virtual PessoaFisica PessoaFisica { get; private set; }
+        public virtual Professor Professor { get; private set; }
 
         public override bool EhValido()
         {

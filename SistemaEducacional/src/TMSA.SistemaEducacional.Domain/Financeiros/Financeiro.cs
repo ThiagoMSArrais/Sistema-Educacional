@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using TMSA.SistemaEducacional.Domain.Core.Models;
+using TMSA.SistemaEducacional.Domain.Matriculas;
 
 namespace TMSA.SistemaEducacional.Domain.Financeiros
 {
@@ -26,12 +27,14 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
         public bool Desconto { get; private set; }
         public decimal ValorDesconto { get; private set; }
         public Guid? ResponsavelFinanceiroId { get; private set; }
+        public Guid? MatriculaId { get; private set; }
 
         //EF Construtor
         protected Financeiro() { }
 
         //EF Propriedades de Navegação
         public virtual ResponsavelFinanceiro ResponsavelFinanceiro { get; private set; }
+        public virtual Matricula Matricula { get; private set; }
 
         public override bool EhValido()
         {

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using System;
 using TMSA.SistemaEducacional.Domain.Core.Models;
 
 namespace TMSA.SistemaEducacional.Domain.Financeiros
@@ -9,12 +10,14 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
             int codigoDoBanco,
             int agencia,
             int conta,
+            int digitoVerificador,
             TipoDeConta tipoDeConta,
             string nomeDoBanco)
         {
             CodigoDoBanco = codigoDoBanco;
             Agencia = agencia;
             Conta = conta;
+            DigitoVerificador = digitoVerificador;
             TipoDeConta = TipoDeConta;
             NomeDoBanco = nomeDoBanco;
         }
@@ -22,8 +25,13 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
         public int CodigoDoBanco { get; private set; }
         public int Agencia { get; private set; }
         public int Conta { get; private set; }
+        public int DigitoVerificador { get; private set; }
         public TipoDeConta TipoDeConta { get; private set; }
         public string NomeDoBanco { get; private set; }
+        public Guid? ResponsavelFinanceiroId { get; private set; }
+
+        //EF PROPRIEDADE DE NAVEGAÇÃO
+        public virtual ResponsavelFinanceiro ResponsavelFinanceiro { get; private set; }
 
         //EF Construtor
         protected DadosBancario() { }
@@ -42,6 +50,7 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
             ValidarConta();
             ValidarTipoDeConta();
             ValidarNomeDoBanco();
+            ValidarDigitoVerificador();
             ValidationResult = Validate(this);
         }
 
@@ -67,6 +76,12 @@ namespace TMSA.SistemaEducacional.Domain.Financeiros
         {
             RuleFor(c => c.TipoDeConta)
                 .NotNull().WithMessage("Selecione o tipo de conta.");
+        }
+
+        private void ValidarDigitoVerificador()
+        {
+            RuleFor(c => c.DigitoVerificador)
+                .NotEmpty().WithMessage("Preencha o digito verificador.");
         }
 
         private void ValidarNomeDoBanco()
