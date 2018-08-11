@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using TMSA.SistemaEducacional.Domain.Matriculas;
 using TMSA.SistemaEducacional.Domain.Matriculas.Repository;
 using TMSA.SistemaEducacional.Infra.Data.Context;
